@@ -7,11 +7,16 @@
 class ProgressBackend : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(int progress READ progress NOTIFY progressChanged)
     QML_ELEMENT
+    QML_SINGLETON
 public:
     ProgressBackend();
 
-    int getProgressValue();
+    int progress();
+
+signals:
+    void progressChanged();
 };
 
 #endif // PROGRESSBACKEND_H

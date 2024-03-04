@@ -30,7 +30,6 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 
-
 Window {
     width: 640
     height: 480
@@ -42,5 +41,14 @@ Window {
         id: screen
     }
 
+    Timer {
+        id: progressTimer
+        interval: 500
+        running: true
+        repeat: true
+        onTriggered: {
+            screen.progressBar1Value = ProgressBackend.progress
+        }
+    }
 }
 

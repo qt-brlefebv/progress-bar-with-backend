@@ -7,6 +7,6 @@ ProgressBackend::ProgressBackend() {
     std::srand(std::time(nullptr));
 }
 
-int ProgressBackend::getProgressValue() {
+int ProgressBackend::progress() {
     return std::rand()/((RAND_MAX + 1u)/100);
 }
