@@ -28,7 +28,6 @@
 ****************************************************************************/
 
 import QtQuick
-import backend
 import content
 
 App {
