@@ -6,7 +6,8 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 
 find_package(Qt6 COMPONENTS Gui Qml Quick)
-add_executable(ProgressBarApp src/main.cpp)
+add_executable(ProgressBarApp src/main.cpp
+    backend/progressbackend.h backend/progressbackend.cpp)
 
 target_link_libraries(ProgressBarApp PRIVATE
     Qt${QT_VERSION_MAJOR}::Core
