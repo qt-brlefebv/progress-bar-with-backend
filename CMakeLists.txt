@@ -16,3 +16,7 @@ target_link_libraries(ProgressBarApp PRIVATE
 )
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/qmlmodules)
+set(QML_IMPORT_PATH
+    .
+    content
+)
