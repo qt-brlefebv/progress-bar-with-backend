@@ -6,8 +6,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 
 find_package(Qt6 COMPONENTS Gui Qml Quick)
-add_executable(ProgressBarApp src/main.cpp
-    backend/progressbackend.h backend/progressbackend.cpp)
+add_executable(ProgressBarApp src/main.cpp)
 
 target_link_libraries(ProgressBarApp PRIVATE
     Qt${QT_VERSION_MAJOR}::Core
@@ -19,5 +18,6 @@ target_link_libraries(ProgressBarApp PRIVATE
 include(${CMAKE_CURRENT_SOURCE_DIR}/qmlmodules)
 set(QML_IMPORT_PATH
     .
+    backend
     content
 )

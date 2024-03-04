@@ -56,11 +56,14 @@ import QtQuick.Layouts 1.0
 import QtQuick.Controls 2.3
 
 Rectangle {
+    id: root
     visible: true
     width: 640
     height: 480
     color: "#242424"
     border.color: "#ffffff"
+
+    property int progressBar1Value: 0
 
     ColumnLayout {
         x: 20
@@ -68,15 +71,16 @@ Rectangle {
         spacing: 20
 
         MyProgressBar {
-            id: root
+            id: bar1
+            progress: root.progressBar1Value
         }
 
         MyProgressBar {
-            id: root1
+            id: bar2
         }
 
         MyProgressBar {
-            id: root2
+            id: bar3
         }
     }
 
@@ -87,29 +91,7 @@ Rectangle {
         startFrame: 0
 
         KeyframeGroup {
-            target: root
-            property: "progress"
-
-            Keyframe {
-                value: 10
-                frame: 0
-            }
-
-            Keyframe {
-                easing.bezierCurve: [0.86, 0.00, 0.07, 1.00, 1, 1]
-                value: 90
-                frame: 2000
-            }
-
-            Keyframe {
-                easing.bezierCurve: [0.86, 0.00, 0.07, 1.00, 1, 1]
-                value: 10
-                frame: 4000
-            }
-        }
-
-        KeyframeGroup {
-            target: root1
+            target: bar2
             property: "progress"
 
             Keyframe {
@@ -131,7 +113,7 @@ Rectangle {
         }
 
         KeyframeGroup {
-            target: root2
+            target: bar3
             property: "progress"
 
             Keyframe {

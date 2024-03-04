@@ -39,6 +39,7 @@ Window {
     title: "ProgressBar"
 
     ProgressBar {
+        id: screen
     }
 
 }

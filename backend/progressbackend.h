@@ -4,12 +4,14 @@
 #include <QObject>
 #include <QQmlEngine>
 
-class ProgressBackend
+class ProgressBackend : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
 public:
     ProgressBackend();
+
+    int getProgressValue();
 };
 
 #endif // PROGRESSBACKEND_H

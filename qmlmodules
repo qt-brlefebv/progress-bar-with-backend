@@ -12,5 +12,4 @@ add_subdirectory(content)
 
 target_link_libraries(ProgressBarApp PRIVATE
     contentplugin
-
 )
