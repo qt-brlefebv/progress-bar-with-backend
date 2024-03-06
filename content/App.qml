@@ -29,7 +29,7 @@
 
 import QtQuick 2.15
 import QtQuick.Window 2.15
-import backend
+import Data
 
 Window {
     width: 640
@@ -48,7 +48,7 @@ Window {
         running: true
         repeat: true
         onTriggered: {
-            screen.progressBar1Value = ProgressBackend.progress
+            screen.progressBar1Value = ProgressProvider.progress
         }
     }
 }

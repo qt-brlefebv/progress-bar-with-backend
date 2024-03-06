@@ -1,17 +1,17 @@
-#ifndef PROGRESSBACKEND_H
-#define PROGRESSBACKEND_H
+#ifndef PROGRESSPROVIDER_H
+#define PROGRESSPROVIDER_H
 
 #include <QObject>
 #include <QQmlEngine>
 
-class ProgressBackend : public QObject
+class ProgressProvider : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(int progress READ progress NOTIFY progressChanged)
     QML_ELEMENT
     QML_SINGLETON
 public:
-    ProgressBackend();
+    ProgressProvider();
 
     int progress();
 
@@ -19,4 +19,4 @@ signals:
     void progressChanged();
 };
 
-#endif // PROGRESSBACKEND_H
+#endif // PROGRESSPROVIDER_H

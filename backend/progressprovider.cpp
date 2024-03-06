@@ -1,12 +1,12 @@
-#include "progressbackend.h"
+#include "ProgressProvider.h"
 
 #include <cstdlib>
 #include <ctime>
 
-ProgressBackend::ProgressBackend() {
+ProgressProvider::ProgressProvider() {
     std::srand(std::time(nullptr));
 }
 
-int ProgressBackend::progress() {
+int ProgressProvider::progress() {
     return std::rand()/((RAND_MAX + 1u)/100);
 }

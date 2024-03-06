@@ -46,8 +46,10 @@ Project {
     qt6Project: true
 
     /* List of plugin directories passed to QML runtime */
-    importPaths: [ ".", "content" ]
+    importPaths: [ "content", "mockImports" ]
 
     /* Required for deployment */
     targetDirectory: "/opt/ProgressBar"
+
+    mainUiFile: "content/ProgressBar.ui.qml"
 }
